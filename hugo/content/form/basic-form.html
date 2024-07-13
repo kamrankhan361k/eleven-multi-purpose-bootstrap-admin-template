@@ -1,0 +1,573 @@
+---
+title: "Basic form"
+group: form
+---
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Basic form</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="form-group">
+            <label class="" for="exampleEmail">Email</label>
+            <input class="form-control" id="exampleEmail" name="email" placeholder="with a placeholder" type="email"></div>
+          <div class="form-group">
+            <label class="" for="examplePassword">Password</label>
+            <input class="form-control" id="examplePassword" name="password" placeholder="password placeholder" type="password"></div>
+          <div class="form-group">
+            <label class="" for="exampleSelect">Select</label>
+            <select class="form-control" id="exampleSelect" name="select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleSelectMulti">Select Multiple</label>
+            <select class="form-control" id="exampleSelectMulti" multiple="" name="selectMulti">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleText">Text Area</label>
+            <textarea class="form-control" id="exampleText" name="text"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleFile">File</label>
+            <input class="form-control-file" id="exampleFile" name="file" type="file">
+            <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          </div>
+          <fieldset class="form-group">
+            <legend>Radio Buttons</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" name="radio1" type="radio">
+                Option one is this and that—be sure to include why it's great</label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" name="radio1" type="radio">
+                Option two can be something else and selecting it will deselect option one</label>
+            </div>
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input class="form-check-input" disabled="" name="radio1" type="radio">
+                Option three is disabled</label>
+            </div>
+          </fieldset>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+              Check me out</label>
+          </div>
+          <button class="btn btn-secondary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Form grid</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="exampleEmail">Email</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="exampleEmail" name="email" placeholder="with a placeholder" type="email"></div>
+          </div>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="examplePassword">Password</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="examplePassword" name="password" placeholder="password placeholder" type="password"></div>
+          </div>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="exampleSelect">Select</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="exampleSelect" name="select"></select>
+            </div>
+          </div>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="exampleSelectMulti">Select Multiple</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="exampleSelectMulti" multiple="" name="selectMulti"></select>
+            </div>
+          </div>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="exampleText">Text Area</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="exampleText" name="text"></textarea>
+            </div>
+          </div>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="exampleFile">File</label>
+            <div class="col-sm-10">
+              <input class="form-control-file" id="exampleFile" name="file" type="file">
+              <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+            </div>
+          </div>
+          <fieldset class="row form-group">
+            <legend class="col-form-label col-sm-2">Radio Buttons</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" name="radio2" type="radio">
+                  Option one is this and that—be sure to include why it's great</label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" name="radio2" type="radio">
+                  Option two can be something else and selecting it will deselect option one</label>
+              </div>
+              <div class="form-check disabled">
+                <label class="form-check-label">
+                  <input class="form-check-input" disabled="" name="radio2" type="radio">
+                  Option three is disabled</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="checkbox2">Checkbox</label>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="checkbox2" type="checkbox">
+                  Check me out</label>
+              </div>
+            </div>
+          </div>
+          <div class="row form-check">
+            <div class="col-sm-10 offset-sm-2">
+              <button class="btn btn-secondary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Form grid form row</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="form-row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="" for="exampleEmail">Email</label>
+                <input class="form-control" id="exampleEmail" name="email" placeholder="with a placeholder" type="email"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="" for="examplePassword">Password</label>
+                <input class="form-control" id="examplePassword" name="password" placeholder="password placeholder" type="password"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleAddress">Address</label>
+            <input class="form-control" id="exampleAddress" name="address" placeholder="1234 Main St" type="text"></div>
+          <div class="form-group">
+            <label class="" for="exampleAddress2">Address 2</label>
+            <input class="form-control" id="exampleAddress2" name="address2" placeholder="Apartment, studio, or floor" type="text"></div>
+          <div class="form-row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="" for="exampleCity">City</label>
+                <input class="form-control" id="exampleCity" name="city" type="text"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="" for="exampleState">State</label>
+                <input class="form-control" id="exampleState" name="state" type="text"></div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label class="" for="exampleZip">Zip</label>
+                <input class="form-control" id="exampleZip" name="zip" type="text"></div>
+            </div>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" id="exampleCheck" name="check" type="checkbox">
+            <label class="form-check-label" for="exampleCheck">Check me out</label>
+          </div>
+          <button class="btn btn-secondary">Sign in</button>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Form inline</b>
+      </div>
+      <div class="card-body">
+        <form class="form-inline">
+          <div class="mb-2 mr-sm-2 mb-sm-0 form-group">
+            <label class="mr-sm-2" for="exampleEmail">Email</label>
+            <input class="form-control" id="exampleEmail" name="email" placeholder="something@idk.cool" type="email"></div>
+          <div class="mb-2 mr-sm-2 mb-sm-0 form-group">
+            <label class="mr-sm-2" for="examplePassword">Password</label>
+            <input class="form-control" id="examplePassword" name="password" placeholder="don't tell!" type="password"></div>
+          <button class="btn btn-secondary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Form feedback</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="form-group">
+            <label class="" for="exampleEmail">Input without validation</label>
+            <input class="form-control" type="text">
+            <div class="invalid-feedback">You will not be able to see this</div>
+            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleEmail">Valid input</label>
+            <input class="is-valid form-control" type="text">
+            <div class="valid-feedback">Sweet! that name is available</div>
+            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+          </div>
+          <div class="form-group">
+            <label class="" for="examplePassword">Invalid input</label>
+            <input class="is-invalid form-control" type="text">
+            <div class="invalid-feedback">Oh noes! that name is already taken</div>
+            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleEmail">Input without validation</label>
+            <input class="form-control" type="text">
+            <div class="invalid-tooltip">You will not be able to see this</div>
+            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleEmail">Valid input</label>
+            <input class="is-valid form-control" type="text">
+            <div class="valid-tooltip">Sweet! that name is available</div>
+            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+          </div>
+          <div class="form-group">
+            <label class="" for="examplePassword">Invalid input</label>
+            <input class="is-invalid form-control" type="text">
+            <div class="invalid-tooltip">Oh noes! that name is already taken</div>
+            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Label hidden</b>
+      </div>
+      <div class="card-body">
+        <form class="form-inline">
+          <div class="mr-1 form-group">
+            <label class="sr-only" for="exampleEmail">Email</label>
+            <input class="form-control" id="exampleEmail" name="email" placeholder="Email" type="email"></div>
+          <div class="mr-1 form-group">
+            <label class="sr-only" for="examplePassword">Password</label>
+            <input class="form-control" id="examplePassword" name="password" placeholder="Password" type="password"></div>
+          <button class="btn btn-secondary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Input type</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="form-group">
+            <label class="" for="exampleEmail">Plain Text (Static)</label>
+            <input class="form-control-plaintext" type="text" value="Some plain text/ static value"></div>
+          <div class="form-group">
+            <label class="" for="exampleEmail">Email</label>
+            <input class="form-control" id="exampleEmail" name="email" placeholder="with a placeholder" type="email"></div>
+          <div class="form-group">
+            <label class="" for="examplePassword">Password</label>
+            <input class="form-control" id="examplePassword" name="password" placeholder="password placeholder" type="password"></div>
+          <div class="form-group">
+            <label class="" for="exampleUrl">Url</label>
+            <input class="form-control" id="exampleUrl" name="url" placeholder="url placeholder" type="url"></div>
+          <div class="form-group">
+            <label class="" for="exampleNumber">Number</label>
+            <input class="form-control" id="exampleNumber" name="number" placeholder="number placeholder" type="number"></div>
+          <div class="form-group">
+            <label class="" for="exampleDatetime">Datetime</label>
+            <input class="form-control" id="exampleDatetime" name="datetime" placeholder="datetime placeholder" type="datetime"></div>
+          <div class="form-group">
+            <label class="" for="exampleDate">Date</label>
+            <input class="form-control" id="exampleDate" name="date" placeholder="date placeholder" type="date"></div>
+          <div class="form-group">
+            <label class="" for="exampleTime">Time</label>
+            <input class="form-control" id="exampleTime" name="time" placeholder="time placeholder" type="time"></div>
+          <div class="form-group">
+            <label class="" for="exampleColor">Color</label>
+            <input class="form-control" id="exampleColor" name="color" placeholder="color placeholder" type="color"></div>
+          <div class="form-group">
+            <label class="" for="exampleSearch">Search</label>
+            <input class="form-control" id="exampleSearch" name="search" placeholder="search placeholder" type="search"></div>
+          <div class="form-group">
+            <label class="" for="exampleSelect">Select</label>
+            <select class="form-control" id="exampleSelect" name="select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleSelectMulti">Select Multiple</label>
+            <select class="form-control" id="exampleSelectMulti" multiple="" name="selectMulti">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleText">Text Area</label>
+            <textarea class="form-control" id="exampleText" name="text"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleFile">File</label>
+            <input class="form-control-file" id="exampleFile" name="file" type="file">
+            <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio">
+              Option one is this and that—be sure to include why it's great</label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+              Check me out</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Inline checkboxes</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+              Some input</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+              Some other input</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Input sizing</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <input class="mb-1 form-control-lg form-control" placeholder="lg" type="text">
+          <input class="mb-1 form-control" placeholder="default" type="text">
+          <input class="mb-1 form-control-sm form-control" placeholder="sm" type="text">
+          <select class="mb-1 form-control-lg form-control">
+            <option>Large Select</option>
+          </select>
+          <select class="mb-1 form-control">
+            <option>Default Select</option>
+          </select>
+          <select class="form-control-sm form-control">
+            <option>Small Select</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Input grid sizing</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="row form-group">
+            <label class="col-form-label-lg col-sm-2 col-form-label" for="exampleEmail">Email</label>
+            <div class="col-sm-10">
+              <input class="form-control-lg form-control" id="exampleEmail" name="email" placeholder="lg" type="email"></div>
+          </div>
+          <div class="row form-group">
+            <label class="col-sm-2 col-form-label" for="exampleEmail2">Email</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="exampleEmail2" name="email" placeholder="default" type="email"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="mb-4 card">
+      <div class="card-header">
+        <b>Custom controls</b>
+      </div>
+      <div class="card-body">
+        <form class="">
+          <div class="form-group">
+            <label class="" for="exampleCheckbox">Checkboxes</label>
+            <div>
+              <div class="custom-checkbox custom-control">
+                <input class="custom-control-input" id="exampleCustomCheckbox" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomCheckbox">Check this custom checkbox</label>
+              </div>
+              <div class="custom-checkbox custom-control">
+                <input class="custom-control-input" id="exampleCustomCheckbox2" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomCheckbox2">Or this one</label>
+              </div>
+              <div class="custom-checkbox custom-control">
+                <input class="custom-control-input" disabled="" id="exampleCustomCheckbox3" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomCheckbox3">But not this disabled one</label>
+              </div>
+              <div class="custom-checkbox custom-control">
+                <input class="custom-control-input" disabled="" id="exampleCustomCheckbox4" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomCheckbox4_X">Can't click this label to check!</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCheckbox">Radios</label>
+            <div>
+              <div class="custom-radio custom-control">
+                <input class="custom-control-input" id="exampleCustomRadio" name="customRadio" type="radio">
+                <label class="custom-control-label" for="exampleCustomRadio">Select this custom radio</label>
+              </div>
+              <div class="custom-radio custom-control">
+                <input class="custom-control-input" id="exampleCustomRadio2" name="customRadio" type="radio">
+                <label class="custom-control-label" for="exampleCustomRadio2">Or this one</label>
+              </div>
+              <div class="custom-radio custom-control">
+                <input class="custom-control-input" disabled="" id="exampleCustomRadio3" type="radio">
+                <label class="custom-control-label" for="exampleCustomRadio3">But not this disabled one</label>
+              </div>
+              <div class="custom-radio custom-control">
+                <input class="custom-control-input" disabled="" id="exampleCustomRadio4" type="radio">
+                <label class="custom-control-label" for="exampleCustomRadio4_X">Can't click this label to select!</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCheckbox">Switches</label>
+            <div>
+              <div class="custom-switch custom-control">
+                <input class="custom-control-input" id="exampleCustomSwitch" name="customSwitch" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomSwitch">Turn on this custom switch</label>
+              </div>
+              <div class="custom-switch custom-control">
+                <input class="custom-control-input" id="exampleCustomSwitch2" name="customSwitch" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomSwitch2">Or this one</label>
+              </div>
+              <div class="custom-switch custom-control">
+                <input class="custom-control-input" disabled="" id="exampleCustomSwitch3" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomSwitch3">But not this disabled one</label>
+              </div>
+              <div class="custom-switch custom-control">
+                <input class="custom-control-input" disabled="" id="exampleCustomSwitch4" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomSwitch4_X">Can't click this label to turn on!</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCheckbox">Inline</label>
+            <div>
+              <div class="custom-checkbox custom-control custom-control-inline">
+                <input class="custom-control-input" id="exampleCustomInline" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomInline">An inline custom input</label>
+              </div>
+              <div class="custom-checkbox custom-control custom-control-inline">
+                <input class="custom-control-input" id="exampleCustomInline2" type="checkbox">
+                <label class="custom-control-label" for="exampleCustomInline2">and another one</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomSelect">Custom Select</label>
+            <select class="custom-select" id="exampleCustomSelect" name="customSelect">
+              <option value="">Select</option>
+              <option>Value 1</option>
+              <option>Value 2</option>
+              <option>Value 3</option>
+              <option>Value 4</option>
+              <option>Value 5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomMutlipleSelect">Custom Multiple Select</label>
+            <select class="custom-select" id="exampleCustomMutlipleSelect" multiple="" name="customSelect">
+              <option value="">Select</option>
+              <option>Value 1</option>
+              <option>Value 2</option>
+              <option>Value 3</option>
+              <option>Value 4</option>
+              <option>Value 5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomSelectDisabled">Custom Select Disabled</label>
+            <select class="custom-select" disabled="" id="exampleCustomSelectDisabled" name="customSelect">
+              <option value="">Select</option>
+              <option>Value 1</option>
+              <option>Value 2</option>
+              <option>Value 3</option>
+              <option>Value 4</option>
+              <option>Value 5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomMutlipleSelectDisabled">Custom Multiple Select Disabled</label>
+            <select class="custom-select" disabled="" id="exampleCustomMutlipleSelectDisabled" multiple="" name="customSelect">
+              <option value="">Select</option>
+              <option>Value 1</option>
+              <option>Value 2</option>
+              <option>Value 3</option>
+              <option>Value 4</option>
+              <option>Value 5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomRange">Custom Range</label>
+            <input class="custom-range" id="exampleCustomRange" name="customRange" type="range"></div>
+          <div class="form-group">
+            <label class="" for="exampleCustomFileBrowser">File Browser</label>
+            <div class="custom-file">
+              <input class="custom-file-input" id="exampleCustomFileBrowser" name="customFile" type="file">
+              <label class="custom-file-label" for="exampleCustomFileBrowser">Choose file</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomFileBrowser">File Browser with Custom Label</label>
+            <div class="custom-file">
+              <input class="custom-file-input" id="exampleCustomFileBrowser" name="customFile" type="file">
+              <label class="custom-file-label" for="exampleCustomFileBrowser">Yo, pick a file!</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="" for="exampleCustomFileBrowser">File Browser Disabled</label>
+            <div class="custom-file">
+              <input class="custom-file-input" disabled="" id="exampleCustomFileBrowser" name="customFile" type="file">
+              <label class="custom-file-label" for="exampleCustomFileBrowser">Choose file</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

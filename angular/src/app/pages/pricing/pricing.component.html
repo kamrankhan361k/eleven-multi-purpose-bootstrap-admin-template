@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="m-auto col-md-10 offset-md-1">
+    <div class="text-center my-5">
+      <h1 class="font-weight-bold">Simple, predictable pricing.</h1>
+      <h6>Get started with the free tier and upgrade anytime, commitment free.</h6>
+      <div class="d-flex align-items-center justify-content-center">Monthly&nbsp;<div class="custom-switch custom-control">
+          <input class="custom-control-input" id="exampleCustomSwitch" name="customSwitch" type="checkbox">
+          <label class="custom-control-label" for="exampleCustomSwitch">&nbsp;Yearly Save 10%</label>
+        </div>
+      </div>
+    </div>
+    <div class="card" *ngIf="prices">
+      <div class="card-body">
+        <div class="d-md-flex flex-md-nowrap">
+          <div class="d-flex flex-column align-items-stretch text-center px-3 py-5 border-right border-light" *ngFor="let price of prices">
+            <div class="d-flex align-items-center justify-content-center mb-5 text-primary price-icon">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:64px;height:64px"
+                  path="{{price.icon}}"
+                  size="64px"
+                ></app-animated-icon>
+              </span>
+            </div>
+            <div class="mb-5">
+              <h5 class="mb-0">{{price.title}}</h5>
+              <small class="mb-0 text-muted">{{price.subtitle}}</small>
+            </div>
+            <ul class="list-inline pricing mb-5">
+              <li class="list-inline-item"  *ngFor="let feature of price.features">{{feature.title}}</li>
+            </ul>
+            <p class="mb-5 text-muted">Perfect for small startups that have less than 10 team members</p>
+            <div class="mt-auto">
+              <p class="price text-monospace">
+                <span class="symbol">$</span><span>{{price.price}}</span>
+              </p>
+              <button class="px-4 py-2 btn btn-primary">Choose plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

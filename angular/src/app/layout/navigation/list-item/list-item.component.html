@@ -1,0 +1,15 @@
+<li class="nav-item" [ngClass]="selectedListClasses">
+  <app-anchor-item [icon]="node.icon" [name]="node.name" [badge]="node.badge" [hasItems]="hasItems()" [expanded]="expanded" (expand)="expand(node)"></app-anchor-item>
+
+  <div class="sub-menu collapse show" *ngIf="hasItems() && expanded" [@slideInOut]>
+    <ul class="nav flex-column">
+      <app-list-item *ngFor="let singleNode of nodeChildren | keyvalue : multilevelMenuService.kvDummyComparerFn"
+        [node]="singleNode.value"
+        [level]="level + 1"
+        [submenuLevel]="singleNode.key"
+        [selectedNode]='selectedNode'
+        (selectedItem)="selectedListItem($event)">
+      </app-list-item>
+    </ul>
+  </div>
+</li>

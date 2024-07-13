@@ -1,0 +1,38 @@
+.app-notifications {
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 300px;
+  font-size: 13px;
+  &-inner {
+    max-height: 185px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .list-group-item:first-child {
+    border-top: 0;
+    border-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom: 0;
+    border-radius: 0;
+  }
+  .list-group-item {
+    border-left: 0;
+    border-right: 0;
+  }
+  .time {
+    font-size: 0.72rem;
+    line-height: 1;
+    display: block;
+    color: $text-muted;
+  }
+}
+.app-settings {
+  width: 200px;
+  padding: 0;
+  font-size: 13px;
+}

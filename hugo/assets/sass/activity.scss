@@ -1,0 +1,21 @@
+.activity {
+  position: relative;
+  .card {
+    position: relative;
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      bottom: 0;
+      width: 2px;
+      background-color: $border-color;
+      left: 27px;
+    }
+    &:last-child:before {
+      display: none;
+    }
+  }
+}

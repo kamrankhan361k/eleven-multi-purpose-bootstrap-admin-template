@@ -1,0 +1,13 @@
+
+.mapboxgl-ctrl-group {
+  display: inline-block;
+  margin: 1rem;
+}
+.app-map .tooltip {
+  opacity: 1;
+  z-index: 9999;
+  position: fixed;
+  padding: $spacer;
+  background: $dark;
+  color: white;
+}

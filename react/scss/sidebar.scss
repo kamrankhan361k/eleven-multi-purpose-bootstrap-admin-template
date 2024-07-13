@@ -1,0 +1,114 @@
+.sidebar {
+  transition: min-width 100ms, transform 100ms;
+  z-index: 12;
+  top: 0;
+  bottom: 0;
+  will-change: transform;
+  min-width: 280px;
+  transform: translateX(-100%);
+  flex: 1 1 auto;
+  flex-shrink: 0;
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+  }
+}
+.page-sidebar {
+  .navbar {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 4.286rem;
+    background-color: transparent;
+    z-index: 11;
+    padding: 0 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px;
+  }
+  .navbar-nav {
+    height: 4.286rem;
+  }
+  .navbar-brand {
+    display: flex;
+    flex: 1 auto;
+    color: rgb(198, 201, 204);
+  }
+  .nav-toggle {
+    color: rgb(198, 201, 204);
+  }
+  .navbar-brand span {
+    letter-spacing: -1px;
+  }
+  .nav-link {
+    padding: 0.685rem 1rem;
+    position: relative;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    color: rgb(198, 201, 204) !important;
+    display: flex;
+    > .animated-icon {
+      display: flex;
+      align-items: center;
+      margin: 0 1.5rem 0 0;
+    }
+  }
+  .sub-menu .nav-link {
+    padding-left: 3.85rem;
+  }
+  .active > .nav-link,
+  .active > app-anchor-item > .nav-link,
+  .nav-item:hover > .nav-link {
+    color: $success !important;
+  }
+  .caret {
+    transition: transform 100ms;
+  }
+  .caret-active {
+    transform: rotate(180deg);
+  }
+  .nav-item.active .nav-link,
+  .nav-item.active .nav-link > .animated-icon {
+    color: $success;
+  }
+
+  .user {
+    line-height: 1;
+  }
+  .sub-menu {
+    font-size: 13px;
+  }
+  &-collapsed {
+    @include media-breakpoint-up(lg) {
+      .page-sidebar:not(:hover) {
+        min-width: 90px!important;
+        max-width: 90px!important;
+        .sub-menu,
+        .menu-name,
+        .caret, .navbar-brand {
+          display: none !important;
+          visibility: hidden;
+        }
+        .nav-toggle {
+          width: 100%;
+        }
+        .nav-link {
+          justify-content: center;
+          .animated-icon {
+            margin: 0;
+          }
+          .badge {
+            position: absolute;
+            right: 1rem;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+

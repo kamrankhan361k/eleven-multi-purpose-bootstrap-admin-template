@@ -1,0 +1,39 @@
+{
+  "baseURL": "/",
+  "languageCode": "en-gb",
+  "title": "Eleven Admin Template",
+  "staticDir": [
+    "static"
+  ],
+  "disableKinds": [
+    "404",
+    "taxonomy",
+    "taxonomyTerm",
+    "RSS",
+    "sitemap",
+    "section"
+  ],
+  "enableRobotsTXT": true,
+  "disableAliases": true,
+  "params": {
+    "disallow_search_engines": false
+  },
+  "outputs": {
+    "home": [
+      "HTML",
+      "RSS"
+    ]
+  },
+  "[module": {
+    "mounts": {
+      "source": "site/data",
+      "target": "data"
+    }
+  },
+  "taxonomies": {
+    "tag": "tags",
+    "category": "categories",
+    "publication_type": "publication_types",
+    "author": "authors"
+  }
+}

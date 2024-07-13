@@ -1,0 +1,22 @@
+.card {
+  margin-bottom: $spacer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+  &-header {
+    position: relative;
+    background-color: inherit;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+  &-header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid $border-color;
+  }
+  &-header.no-shadow::after {
+    border-bottom: 0;
+  }
+}

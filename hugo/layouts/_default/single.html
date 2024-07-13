@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  <head>
+    {{ partial "meta" . }}
+    <title>{{.Title }} | {{ .Site.Title -}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Anonymous+Pro:400,700|Arimo:400,700" rel="stylesheet"/>
+    {{ partial "styles" . }}
+    {{ if eq .Params.title "Calendar" }}
+    <link href='{{ .Site.BaseURL }}vendor/fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='{{ .Site.BaseURL }}vendor/fullcalendar/daygrid/main.css' rel='stylesheet' />
+    <link href='{{ .Site.BaseURL }}vendor/fullcalendar/timegrid/main.css' rel='stylesheet' />
+    <link href='{{ .Site.BaseURL }}vendor/fullcalendar/bootstrap/main.css' rel='stylesheet' />
+    <script src='{{ .Site.BaseURL }}vendor/fullcalendar/core/main.js'></script>
+    <script src='{{ .Site.BaseURL }}vendor/fullcalendar/daygrid/main.js'></script>
+    <script src='{{ .Site.BaseURL }}vendor/fullcalendar/timegrid/main.js'></script>
+    <script src='{{ .Site.BaseURL }}vendor/fullcalendar/bootstrap/main.js'></script>
+    {{ end }}
+    {{ if or (eq .Params.title "Markers") (eq .Params.title "Location") }}
+    <link href="{{ .Site.BaseURL }}vendor/mapbox/mapbox-gl.css" rel="stylesheet" />
+    <script src="{{ .Site.BaseURL }}vendor/mapbox/mapbox-gl.js"></script>
+    {{ end }}
+    {{ if or (eq .Params.title "Charts") (eq .Params.title "Home") }}
+    <script src="{{ .Site.BaseURL }}vendor/Chart.min.js"></script>
+    {{ end }}
+    {{ if eq .Params.title "Validation" }}
+    <script src="{{ .Site.BaseURL }}vendor/pristine.min.js"></script>
+    {{ end }}
+    {{ if eq .Params.title "Editor" }}
+    <link href="{{ .Site.BaseURL }}vendor/quill/quill.snow.css" rel="stylesheet">
+    <script src="{{ .Site.BaseURL }}vendor/quill/quill.js"></script>
+    {{ end }}
+    {{ if eq .Params.title "Taskboard" }}
+    <script src="{{ .Site.BaseURL }}vendor/sortable.js"></script>
+    {{ end }}
+  </head>
+  <body>
+    <svg width="24" height="24" viewBox="0 0 24 24" style="display:none">
+      <g id="logo-icon" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" fill-rule="evenodd">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+      </g>
+    </svg>
+    <!-- page-sticky-sidebar page-top-header dark-mode page-boxed page-sticky-header -->
+    <div class="page page-sticky-sidebar">
+      {{ partial "top-header" . }}
+      <div class="position-relative d-flex flex-row flex-fill page-wrapper">
+        {{ partial "sidebar" . }}
+        <div class="position-relative d-flex flex-column flex-fill page-content" style="min-width:0">
+          {{ if .Params.noheader }}
+          <div class="d-lg-none">{{ partial "header" . }}</div>
+          {{ else }}
+          {{ partial "header" . }}
+          {{ end }}
+          <div class="page-inner bg-light {{ if .Params.nopagepadding }} p-0 {{ end }}">
+            {{ .Content }}
+          </div>
+          {{ if not .Params.nofooter }}
+          {{ partial "footer" . }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ partial "scripts" . }}
+  </body>
+</html>

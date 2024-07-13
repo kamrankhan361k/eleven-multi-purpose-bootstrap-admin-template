@@ -1,0 +1,149 @@
+html {
+  font-size: 14px;
+}
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  background: $gray-100;
+}
+a {
+  color: $primary;
+}
+a:hover {
+  text-decoration: none;
+}
+svg {
+  display: inherit;
+}
+b, strong {
+  font-weight: 600;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  &-content {
+    @include media-breakpoint-down(md) {
+      min-height: 100vh;
+    }
+  }
+  &-overlay {
+    z-index: 98;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-out, visibility .3s ease-out;
+    background-color: rgba(0,0,0,.3);
+  }
+  &-inner {
+    margin: 0 auto;
+    padding: $spacer $spacer 0;
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  &-header-hidden .page-inner {
+    min-height: 100vh;
+  }
+  &.page-boxed {
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 992px) {
+      max-width: 95%;
+      margin: 2rem auto 0;
+      min-height: auto;
+      min-height: calc(100vh - 2rem);
+      overflow: visible!important;
+      box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.25);
+    }
+    &.page-static-sidebar {
+      height: auto;
+      min-height: calc(100vh - 2rem);
+    }
+  }
+  &.page-sticky-sidebar {
+    @include media-breakpoint-up(lg) {
+      .sidebar {
+        height: 100vh;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+      &.page-top-header.page-sticky-header .sidebar {
+        height: calc(100vh - 60px);
+        top: 60px;
+      }
+    }
+  }
+  &.page-sticky-header {
+    .app-header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 14;
+    }
+    .sidebar > div {
+      > .navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+    }
+  }
+  &.page-static-sidebar {
+    @include media-breakpoint-up(lg) {
+      > div {
+        overflow: visible!important;
+      }
+      > .page-wrapper > .sidebar,
+      > .page-wrapper >  .page-content {
+        position: relative!important;
+        left: auto!important;
+        overflow-y: initial!important;
+      }
+      &.page-sticky-header {
+        .sidebar > div {
+          overflow: visible!important;
+          height: auto!important;
+          min-height: 100%;
+          > .navbar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  &.page-top-header {
+    > .app-header {
+      display: block!important;
+      visibility: visible!important;
+    }
+    .page-content > .app-header {
+      display: none;
+      visibility: hidden;
+    }
+    .sidebar .navbar {
+      display: none!important;
+      visibility: hidden!important;
+    }
+  }
+}
+.dropdown-menu {
+  min-width: 0;
+}
+ng-lottie > div {
+  display: inline-block;
+}

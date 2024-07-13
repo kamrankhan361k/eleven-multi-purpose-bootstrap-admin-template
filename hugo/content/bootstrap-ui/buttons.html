@@ -1,0 +1,333 @@
+---
+title: "Buttons"
+group: bootstrap-ui
+---
+<div class="row">
+  <div class="col-sm-12 col-lg-10 offset-lg-1">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <div class="mb-4">
+          <div>
+            <button class="btn btn-primary">primary</button>
+            <button class="btn btn-secondary">secondary</button>
+            <button class="btn btn-success">success</button>
+            <button class="btn btn-info">info</button>
+            <button class="btn btn-warning">warning</button>
+            <button class="btn btn-danger">danger</button>
+            <button class="btn btn-link">link</button>
+          </div>
+        </div>
+        <h5 id="Outline-Buttons">Outline Buttons</h5>
+        <div class="mb-4">
+          <div>
+            <button class="btn btn-outline-primary">primary</button>
+            <button class="btn btn-outline-secondary">secondary</button>
+            <button class="btn btn-outline-success">success</button>
+            <button class="btn btn-outline-info">info</button>
+            <button class="btn btn-outline-warning">warning</button>
+            <button class="btn btn-outline-danger">danger</button>
+          </div>
+        </div>
+        <h5 id="Sizes">Sizes</h5>
+        <div class="mb-4">
+          <button class="btn btn-primary btn-lg">Large Button</button>
+          <button class="btn btn-secondary btn-lg">Large Button</button>
+        </div>
+        <div class="mb-4">
+          <button class="btn btn-primary btn-sm">Small Button</button>
+          <button class="btn btn-secondary btn-sm">Small Button</button>
+        </div>
+        <div class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block">Block level button</button>
+          <button class="btn btn-secondary btn-lg btn-block">Block level button</button>
+        </div>
+        <h5 id="Active-State">Active State</h5>
+        <div class="mb-4">
+          <button class="btn btn-primary btn-lg active">Primary link</button>
+          <button class="btn btn-secondary btn-lg active">Link</button>
+        </div>
+        <h5 id="Button-groups">Button groups</h5>
+        <div class="mb-4">
+          <div class="btn-group" role="group">
+            <button class="btn btn-secondary">Left</button>
+            <button class="btn btn-secondary">Middle</button>
+            <button class="btn btn-secondary">Right</button>
+          </div>
+        </div>
+        <h5 id="Button-Toolbar">Button Toolbar</h5>
+        <div class="mb-4">
+          <div class="btn-toolbar" role="toolbar">
+            <div class="mr-1 btn-group" role="group">
+              <button class="btn btn-secondary">1</button>
+              <button class="btn btn-secondary">2</button>
+              <button class="btn btn-secondary">3</button>
+              <button class="btn btn-secondary">4</button>
+            </div>
+            <div class="mr-1 btn-group" role="group">
+              <button class="btn btn-secondary">5</button>
+              <button class="btn btn-secondary">6</button>
+              <button class="btn btn-secondary">7</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button class="btn btn-secondary">8</button>
+            </div>
+          </div>
+        </div>
+        <h5 id="Sizing">Sizing</h5>
+        <div class="mb-4">
+          <div class="btn-group-lg btn-group" role="group">
+            <button class="btn btn-secondary">Left</button>
+            <button class="btn btn-secondary">Middle</button>
+            <button class="btn btn-secondary">Right</button>
+          </div>
+          <br>
+          <div class="mt-1 btn-group" role="group">
+            <button class="btn btn-secondary">Left</button>
+            <button class="btn btn-secondary">Middle</button>
+            <button class="btn btn-secondary">Right</button>
+          </div>
+          <br>
+          <div class="mt-1 btn-group-sm btn-group" role="group">
+            <button class="btn btn-secondary">Left</button>
+            <button class="btn btn-secondary">Middle</button>
+            <button class="btn btn-secondary">Right</button>
+          </div>
+        </div>
+        <h5 id="Nesting">Nesting</h5>
+        <div class="mb-4">
+          <div class="btn-group" role="group">
+            <button class="btn btn-secondary">1</button>
+            <button class="btn btn-secondary">2</button>
+            <div class="btn-group">
+              <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+              <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Dropdown Link</button>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Dropdown Link</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 id="Vertical-variation">Vertical variation</h5>
+        <div class="mb-4">
+          <div class="btn-group-vertical" role="group">
+            <button class="btn btn-secondary">1</button>
+            <button class="btn btn-secondary">2</button>
+            <div class="btn-group">
+              <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+              <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Dropdown Link</button>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Dropdown Link</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h5 id="Disabled-State">Disabled State</h5>
+        <div class="mb-4">
+          <button class="btn btn-primary btn-lg disabled" disabled="">Primary button</button>
+          <button class="btn btn-secondary btn-lg disabled" disabled="">Button</button>
+        </div>
+        <h5 id="Checkbox-and-Radio-Buttons-Stateful-Buttons">Checkbox and Radio Buttons (Stateful Buttons)</h5>
+        <div class="mb-4">
+          <div>
+            <h5>Radio Buttons</h5>
+            <div class="btn-group" role="group">
+              <button class="btn btn-primary" type="button">One</button>
+              <button class="btn btn-primary" type="button">Two</button>
+              <button class="btn btn-primary" type="button">Three</button>
+            </div>
+            <p>Selected:
+            </p>
+            <h5>Checkbox Buttons</h5>
+            <div class="btn-group" role="group">
+              <button class="btn btn-primary" type="button">One</button>
+              <button class="btn btn-primary" type="button">Two</button>
+              <button class="btn btn-primary" type="button">Three</button>
+            </div>
+            <p>Selected: []</p>
+          </div>
+        </div>
+        <h5 id="Close-icon">Close icon</h5>
+        <div class="mb-4">
+          <div>
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <button aria-label="Close" class="close" >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <p class="card-text">Default close icon</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <button aria-label="Cancel" class="close">
+                      <span aria-hidden="true">–</span>
+                    </button>
+                  </div>
+                  <p class="card-text">Custom content and aria-label</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mb-4">
+            <div class="dropdown">
+              <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+              <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                <h6 class="dropdown-header" tabindex="-1">Header</h6>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Some Action</button>
+                <button class="disabled dropdown-item" disabled="" tabindex="-1" type="button">Action (disabled)</button>
+                <div class="dropdown-divider" tabindex="-1"></div>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Foo Action</button>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Bar Action</button>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Quo Action</button>
+              </div>
+            </div>
+          </div>
+          <h5 id="Alignment">Alignment</h5>
+          <div class="mb-4">
+            <div style="display: inline-block;">
+              <div class="dropdown">
+                <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown's menu is right-aligned</button>
+                <div aria-hidden="true" class="dropdown-menu dropdown-menu-right" role="menu" tabindex="-1">
+                  <h6 class="dropdown-header" tabindex="-1">Header</h6>
+                  <button class="disabled dropdown-item" disabled="" tabindex="-1" type="button">Action</button>
+                  <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                  <div class="dropdown-divider" tabindex="-1"></div>
+                  <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Really Really Long Action (Really!)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 id="Sizing">Sizing</h5>
+          <div class="mb-4">
+            <div>
+              <div class="btn-group btn-group-lg">
+                <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+                <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                  <h6 class="dropdown-header" tabindex="-1">Header</h6>
+                  <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Action</button>
+                </div>
+              </div>
+              <div class="mt-1 dropdown">
+                <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+                <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                  <h6 class="dropdown-header" tabindex="-1">Header</h6>
+                  <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Action</button>
+                </div>
+              </div>
+              <div class="mt-1 btn-group btn-group-sm">
+                <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+                <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                  <h6 class="dropdown-header" tabindex="-1">Header</h6>
+                  <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Action</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>Custom Dropdown</h4>
+          <div class="mb-4">
+            <div class="dropdown">
+              <span aria-expanded="false" aria-haspopup="true" class="" data-toggle="dropdown">Custom Dropdown Content</span>
+              <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                <div>Custom dropdown item</div>
+                <div>Custom dropdown item</div>
+                <div>Custom dropdown item</div>
+                <div>Custom dropdown item</div>
+              </div>
+            </div>
+          </div>
+          <h5 id="Uncontrolled-Dropdown">Uncontrolled Dropdown</h5>
+          <div class="mb-4">
+            <div class="dropdown">
+              <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+              <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                <h6 class="dropdown-header" tabindex="-1">Header</h6>
+                <button class="disabled dropdown-item" disabled="" tabindex="-1" type="button">Action</button>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                <div class="dropdown-divider" tabindex="-1"></div>
+                <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+              </div>
+            </div>
+          </div>
+          <h5 id="Drop-direction-variations">Drop direction variations</h5>
+          <div class="mb-4">
+            <div class="row">
+              <div class="col">
+                <div class="dropup dropdown">
+                  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropup</button>
+                  <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="dropleft dropdown">
+                  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropleft</button>
+                  <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="dropright dropdown">
+                  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-secondary" type="button" data-toggle="dropdown">Dropright</button>
+                  <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 id="Modifiers">Modifiers</h5>
+          <div class="mb-4">
+            <div class="row">
+              <div class="col">
+                <div class="dropdown">
+                  <button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" type="button" data-toggle="dropdown">Dropdown</button>
+                  <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                    <button class="dropdown-item" role="menuitem" tabindex="0" type="button">Another Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 id="setActiveFromChild">setActiveFromChild</h5>
+          <div class="mb-4">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+              <ul class="ml-auto navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/components/">Inactive Link</a>
+                </li>
+                <div class="active dropdown">
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle">Dropdown</a>
+                  <div aria-hidden="true" class="dropdown-menu" role="menu" tabindex="-1">
+                    <a class="dropdown-item active" href="/blah" role="menuitem" tabindex="0">Link</a>
+                  </div>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

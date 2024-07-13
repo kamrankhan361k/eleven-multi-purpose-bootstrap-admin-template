@@ -1,0 +1,95 @@
+---
+title: "Widgets"
+group: widgets
+---
+
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="576K" value="Users" type="primary" icon="vendor/animated-icons/heart/heart.json" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="99.99%" value="Uptime" type="secondary" icon="vendor/animated-icons/online/online.json" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="465K" value="Visitors" type="warning" icon="vendor/animated-icons/activity/activity.json" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="7,578" value="Likes" type="danger" icon="vendor/animated-icons/thumb/thumb.json" >}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="576K" value="Users" type="dark" icon="vendor/animated-icons/heart/heart.json" fill="" reverse="" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="99.99%" value="Uptime" type="success" icon="vendor/animated-icons/online/online.json" fill="" reverse="" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="465K" value="Visitors" type="info" icon="vendor/animated-icons/activity/activity.json" fill="" reverse="" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="7,578" value="Likes" type="primary" icon="vendor/animated-icons/thumb/thumb.json" fill="" reverse="" >}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="576K" value="Users" type="danger" icon="vendor/animated-icons/heart/heart.json" fill="" vertical="" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="99.99%" value="Uptime" type="info" icon="vendor/animated-icons/online/online.json" fill="" vertical="" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="465K" value="Visitors" type="warning" icon="vendor/animated-icons/activity/activity.json" fill="" vertical="" >}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="7,578" value="Likes" type="dark" icon="vendor/animated-icons/thumb/thumb.json" fill="" vertical="" >}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="card card-body">
+      <div class="justify-content-start align-items-center row">
+        <div class="col-auto">
+          <button type="button" class="btn btn-secondary" style="padding: 0.1rem; border-radius: 50%; min-width: 32px; min-height: 32px;">
+            <span class="position-relative d-flex rounded-circle" style="width: 30px; height: 30px;">
+              <img src="images/avatar.jpg" alt="image" width="30px" height="30px" class="rounded-circle">
+            </span>
+          </button>
+        </div>
+        <div class="col-auto">
+          <h5 class="stat-widget-title mb-0 fw-400">Samuel</h5>
+          <h6 class="stat-widget-subtitle">UX Developer</h6>
+        </div>
+        <span class="mr-auto"></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="14°C" value="San Francisco, CA" type="secondary" icon="vendor/animated-icons/sun-weather/sun-weather.json" fill="" reverse=""  icon-loop="true" icon-auto-play="true">}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="14°C" value="San Francisco, CA" type="primary" icon="vendor/animated-icons/windy-weather/windy-weather.json" fill="" icon-loop="true" icon-auto-play="true">}}
+  </div>
+  <div class="col-sm-6 col-md-3">
+    {{< stat title="14°C" value="San Francisco, CA" type="danger" icon="vendor/animated-icons/windy-weather/windy-weather.json" fill="" reverse="" icon-loop="true" icon-auto-play="true">}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 col-xl-4">
+    {{< feed >}}
+  </div>
+  <div class="col-md-6 col-xl-4">
+    {{< image-stat >}}
+  </div>
+  <div class="col-md-6 col-xl-4">
+    {{< image-stat-profile >}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    {{< weather >}}
+  </div>
+  <div class="col-sm-12 col-md-6">
+    {{< post >}}
+  </div>
+</div>

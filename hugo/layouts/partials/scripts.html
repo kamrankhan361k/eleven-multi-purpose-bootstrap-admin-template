@@ -1,0 +1,49 @@
+
+<!-- Scripts -->
+<script src="{{ .Site.BaseURL }}vendor/jquery-3.4.1.slim.min.js"></script>
+<script src="{{ .Site.BaseURL }}vendor/bootstrap.bundle.min.js"></script>
+<script src="{{ .Site.BaseURL }}vendor/lottie.js"></script>
+
+{{ if and (not (in .Params.title "Signin")) (not (in .Params.title "Signup")) (not (in .Params.title "Forgot")) (not (in .Params.title "Lockscreen")) (not (in .Params.title "404")) (not (in .Params.title "500")) }}
+{{ $app := resources.Get "js/app.js" | minify }}
+<script src="{{ $app.Permalink }}"></script>
+{{ end }}
+
+<!-- Page scripts -->
+
+{{ if eq .Params.title "Editor" }}
+{{ $editor := resources.Get "js/editor.js" | minify }}
+<script src="{{ $editor.Permalink }}"></script>
+{{ end }}
+
+{{ if eq .Params.title "Validation" }}
+{{ $formvalidation := resources.Get "js/validation.js" | minify }}
+<script src="{{ $formvalidation.Permalink }}"></script>
+{{ end }}
+
+{{ if eq .Params.title "Location" }}
+{{ $location := resources.Get "js/location.js" | minify }}
+<script src="{{ $location.Permalink }}"></script>
+{{ end }}
+
+{{ if eq .Params.title "Markers" }}
+{{ $markers := resources.Get "js/markers.js" | minify }}
+<script src="{{ $markers.Permalink }}"></script>
+{{ end }}
+
+{{ if eq .Params.title "Calendar" }}
+{{ $calendar := resources.Get "js/calendar.js" | minify }}
+<script src="{{ $calendar.Permalink }}"></script>
+{{ end }}
+
+{{ if eq .Params.title "Charts" }}
+{{ $charts := resources.Get "js/charts.js" | minify  }}
+<script src="{{ $charts.Permalink }}"></script>
+{{ end }}
+
+{{ if eq .Params.title "Home" }}
+{{ $dashboard := resources.Get "js/dashboard.js"  | minify }}
+<script src="{{ $dashboard.Permalink }}"></script>
+{{ end }}
+
+

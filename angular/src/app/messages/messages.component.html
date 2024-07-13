@@ -1,0 +1,120 @@
+<div class="position-relative d-flex flex-row flex-fill page-wrapper">
+  <div class="sidebar message-sidebar" [ngStyle]="{
+    'transform': !sidebar.opened ? 'translateX(-100%)' : 'translateX(0)',
+    'min-width':'350px', 'max-width':'350px'
+  }">
+    <div class="overflow-hidden d-flex h-100 flex-column flex-1 message-sidebar bg-white">
+      <nav class="bg-white navbar navbar-expand">
+        <ul class="d-flex justify-content-between align-items-center w-100 text-center text-body navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:18px;height:18px"
+                  path="assets/animated-icons/bookmark/bookmark.json"
+                  size="18px"
+                ></app-animated-icon>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:18px;height:18px"
+                  path="assets/animated-icons/heart/heart.json"
+                  size="18px"
+                ></app-animated-icon>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:18px;height:18px"
+                  path="assets/animated-icons/star/star.json"
+                  size="18px"
+                ></app-animated-icon>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:18px;height:18px"
+                  path="assets/animated-icons/restart/restart.json"
+                  size="18px"
+                ></app-animated-icon>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:18px;height:18px"
+                  path="assets/animated-icons/flag/flag.json"
+                  size="18px"
+                ></app-animated-icon>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="scroll-y flex-1 list-group" *ngIf="messages">
+        <a class="bg-transparent border-0 rounded-0 border-light py-4 list-group-item-action list-group-item" *ngFor="let message of messages" (click)="selectMessage(message.id)">
+          <div class="w-100 d-flex flex-row align-items-center">
+            <app-avatar class="mr-3" [src]="message.avatar" size="48" [name]="message.from" [status]="getStatus()"></app-avatar>
+            <span class="w-100">
+              <small class="d-flex w-100 text-muted">
+                <span>{{message.from}}</span>
+                <span class="mr-auto"></span>
+                <span>{{message.date}} ago</span>
+              </small>
+              <span class="d-block">{{message.subject}}</span>
+            </span>
+          </div>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="page-overlay" [ngStyle]="{
+    'visibility': !sidebar.isOverlayVisible ? 'hidden' : 'visible',
+    'opacity': !sidebar.isOverlayVisible ? '0' : '1'
+  }" (click)="sidebar.opened = false; sidebar.isOverlayVisible = false;"></div>
+  <div class="position-relative d-flex flex-column flex-fill page-content" style="min-width: 0px;">
+    <nav class="bg-white d-lg-none navbar navbar-expand">
+      <ul class="d-flex justify-content-between align-items-center w-100 text-center text-body navbar-nav">
+        <li class="nav-item">
+          <a class="d-flex align-items-center p-0 nav-link messages-nav-toggler" (click)="toggleMobileSidebar()">
+            <span class="d-inline-block" style="transform: rotate(180deg);">
+              <span class="animated-icon">
+                <app-animated-icon
+                  style="width:24px;height:24px"
+                  path="assets/animated-icons/forward/forward.json"
+                  size="24px"
+                ></app-animated-icon>
+              </span>
+            </span>
+            <span class="d-inline-block px-2">More messages</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="p-5">
+      <div class="px-5 py-3" *ngIf="currentMessage">
+        <div class="d-flex align-items-center mb-3">
+          <app-avatar class="mr-3" [src]="currentMessage.avatar" size="48" [name]="currentMessage.from" [status]="getStatus()"></app-avatar>
+          <div class="pl-3">
+            <div class="date">{{currentMessage.date}} ago</div>
+            <h6>{{currentMessage.from}}</h6>
+          </div>
+        </div>
+        <p class="lead my-4">{{currentMessage.subject}}</p>
+        <div [innerHtml]="currentMessage.body"></div>
+      </div>
+    </div>
+  </div>
+</div>

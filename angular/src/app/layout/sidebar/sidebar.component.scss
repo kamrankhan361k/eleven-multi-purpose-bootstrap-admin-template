@@ -1,0 +1,12 @@
+
+@media (min-width: 992px) {
+  .page-sidebar-collapsed .page-sidebar:not(:hover) .nav-toggle {
+    width: 100%;
+  }
+  .nav-toggle .animated-icon {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}

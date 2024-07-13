@@ -1,0 +1,58 @@
+.dark-mode {
+  background-color: $dark;
+  color: $white;
+  h1, h2,h3, h4, h5, p,.table {
+    color: inherit;
+  }
+  .bg-light, .jumbotron {
+    background-color: lighten($dark, 5)!important;
+  }
+  .bg-white,.table-dark {
+    background-color: lighten($dark, 2)!important;
+  }
+
+  .card,
+  .list-group-item,
+  .app-taskboard-task,
+  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: rgba(255,255,255,.87);
+    background-color: lighten($dark, 2);
+  }
+  .card, .app-header .navbar {
+    box-shadow: none;
+  }
+
+  .form-control {
+    background: 0 0;
+  }
+
+  .activity .card::before {
+    background-color: lighten($dark, 5)!important;
+  }
+
+  .border-white {
+    border-color: lighten($dark, 2)!important;
+  }
+  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    border-color: lighten($dark, 5) lighten($dark, 5) lighten($dark, 2);
+}
+
+  .table th, .table td,
+  .card-header::after,
+  .border-light,
+  .divider::before, .divider::after,
+  .rbc-day-slot .rbc-event,
+  .rbc-day-bg + .rbc-day-bg,
+  .rbc-month-row + .rbc-month-row,
+  .rbc-header,
+  .rbc-time-content > * + * > *,
+  .rbc-timeslot-group,
+  .rbc-time-content, .rbc-day-slot .rbc-time-slot,
+  .rbc-time-header-content,
+  .form-control,
+  quill-editor,
+  .ql-container.ql-snow,
+  .ql-toolbar.ql-snow , .nav-tabs {
+    border-color: lighten($dark, 5)!important;
+  }
+}

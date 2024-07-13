@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="576K" title="Users" icon="assets/animated-icons/heart/heart.json" type="primary" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="99.99%" title="Uptime" icon="assets/animated-icons/online/online.json" type="secondary" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="465K" title="Visitors" icon="assets/animated-icons/activity/activity.json" type="warning" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="7,578" title="Likes" icon="assets/animated-icons/thumb/thumb.json" type="danger" iconSize="22"></app-stat>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="576K" title="Users" icon="assets/animated-icons/heart/heart.json" iconSize="22" type="dark" fill="true" reverse="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="99.99%" title="Uptime" icon="assets/animated-icons/online/online.json" iconSize="22" type="success" fill="true" reverse="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="465K" title="Visitors" icon="assets/animated-icons/activity/activity.json" iconSize="22" type="warning" fill="true" reverse="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="7,578" title="Likes" icon="assets/animated-icons/thumb/thumb.json" iconSize="22" type="primary" fill="true" reverse="true"></app-stat>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="576K" title="Users" icon="assets/animated-icons/heart/heart.json" iconSize="44" type="danger" fill="true" vertical="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="99.99%" title="Uptime" icon="assets/animated-icons/online/online.json" iconSize="44" type="info" fill="true" vertical="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="465K" title="Visitors" icon="assets/animated-icons/activity/activity.json" iconSize="44" type="warning" fill="true" vertical="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="7,578" title="Likes" icon="assets/animated-icons/thumb/thumb.json" iconSize="44" type="dark" fill="true" vertical="true"></app-stat>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="Samuel" title="UX Developer" src="assets/images/avatar.jpg" type="primary" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="14°C" title="San Francisco, CA" icon="assets/animated-icons/sun-weather/sun-weather.json" iconSize="22" iconAutoPlay="true" type="secondary" fill="true" reverse="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="14°C" title="San Francisco, CA" icon="assets/animated-icons/windy-weather/windy-weather.json" iconSize="22" iconAutoPlay="true" type="primary" fill="true"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="14°C" title="San Francisco, CA" icon="assets/animated-icons/windy-weather/windy-weather.json" iconSize="22" iconAutoPlay="true" type="danger" fill="true" reverse="true"></app-stat>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 col-xl-4">
+    <div class="card">
+      <div class="card-header">
+        <div
+          class="d-flex align-items-center justify-content-between"
+        >
+          <span>Feed</span>
+          <div
+            class="button-shadow btn-group-sm btn-group"
+            role="group"
+          >
+            <button class="btn btn-outline-secondary">◄</button>
+            <button class="btn btn-outline-secondary">►</button>
+          </div>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <a class="list-group-item-action list-group-item" href="" *ngFor="let item of feed">
+          <div class="d-flex align-items-center py-1">
+            <app-avatar [src]="item.avatar" size="48" [name]="item.subject"></app-avatar>
+            <div class="pl-3">
+              <span class="d-block">{{item.subject}}</span>
+              <small>{{item.message}}</small>
+            </div>
+          </div>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-4">
+    <app-image-stat [images]="statCardImages" [data]="stats" coverHeight="201"></app-image-stat>
+  </div>
+  <div class="col-md-6 col-xl-4">
+    <app-profile-stat name="John Doe"
+            avatar="assets/images/face1.jpg"
+            [images]="profileStatCardImages"
+            location="London, Uk"
+            coverHeight="201"
+            [data]="stats"
+
+    ></app-profile-stat>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <app-weather-card city="harare" country="zw" days="6"></app-weather-card>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <app-post-card title="Shrimp and Chorizo Paella"
+    subtitle="Yesterday"
+    [images]="postCardImages"
+    coverHeight="294"
+    text="Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp."></app-post-card>
+  </div>
+</div>

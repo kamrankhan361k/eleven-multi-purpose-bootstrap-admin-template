@@ -1,0 +1,206 @@
+[
+  {
+    "path": "dashboard",
+    "name": "Home",
+    "icon": "vendor/animated-icons/shopping-bag/shopping-bag.json"
+  },
+  {
+    "path": "widgets",
+    "name": "Widgets",
+    "icon": "vendor/animated-icons/book/book.json",
+    "badge": {
+      "type": "danger",
+      "value": "5"
+    }
+  },
+  {
+    "path": "bootstrap-ui",
+    "name": "Bootstrap UI",
+    "icon": "vendor/animated-icons/folder/folder.json",
+    "children": [
+      {
+        "path": "alerts",
+        "name": "Alerts"
+      },
+      {
+        "path": "badge",
+        "name": "Badge"
+      },
+      {
+        "path": "buttons",
+        "name": "Buttons"
+      },
+      {
+        "path": "card",
+        "name": "Card"
+      },
+      {
+        "path": "carousel",
+        "name": "Carousel"
+      },
+      {
+        "path": "jumbotron",
+        "name": "Jumbotron"
+      },
+      {
+        "path": "list-group",
+        "name": "List Group"
+      },
+      {
+        "path": "progress",
+        "name": "Progress"
+      },
+      {
+        "path": "other",
+        "name": "Other"
+      }
+    ]
+  },
+  {
+    "path": "messages",
+    "name": "Messages",
+    "icon": "vendor/animated-icons/speech/speech.json"
+  },
+  {
+    "path": "form",
+    "name": "Form",
+    "icon": "vendor/animated-icons/toggle/toggle.json",
+    "children": [
+      {
+        "path": "basic-form",
+        "name": "Basic Form"
+      },
+      {
+        "path": "editor",
+        "name": "Editor"
+      },
+      {
+        "path": "validation",
+        "name": "Validation"
+      }
+    ]
+  },
+  {
+    "path": "tables",
+    "name": "Tables",
+    "icon": "vendor/animated-icons/box/box.json",
+    "children": [
+      {
+        "path": "basic-table",
+        "name": "Basic Table"
+      },
+      {
+        "path": "responsive",
+        "name": "Responsive"
+      }
+    ]
+  },
+  {
+    "path": "taskboard",
+    "name": "Taskboard",
+    "icon": "vendor/animated-icons/bookmark-in-book/bookmark-in-book.json",
+    "badge": {
+      "type": "primary",
+      "value": "New"
+    }
+  },
+  {
+    "path": "charts",
+    "name": "Charts",
+    "icon": "vendor/animated-icons/loading-bar/loading-bar.json"
+  },
+  {
+    "path": "media",
+    "name": "Media",
+    "icon": "vendor/animated-icons/youtube/youtube.json"
+  },
+  {
+    "path": "mapbox",
+    "name": "Mapbox",
+    "icon": "vendor/animated-icons/up-down/up-down.json",
+    "children": [
+      {
+        "path": "markers",
+        "name": "Markers"
+      },
+      {
+        "path": "location",
+        "name": "Location"
+      }
+    ]
+  },
+  {
+    "path": "pages",
+    "name": "Pages",
+    "icon": "vendor/animated-icons/document/document.json",
+    "children": [
+      {
+        "path": "invoice",
+        "name": "Invoice"
+      },
+      {
+        "path": "timeline",
+        "name": "Timeline"
+      },
+      {
+        "path": "blank",
+        "name": "Blank"
+      },
+      {
+        "path": "pricing",
+        "name": "Pricing"
+      }
+    ]
+  },
+  {
+    "path": "social",
+    "name": "Social",
+    "icon": "vendor/animated-icons/thumb/thumb.json"
+  },
+  {
+    "path": "calendar",
+    "name": "Calendar",
+    "icon": "vendor/animated-icons/calendar/calendar.json"
+  },
+  {
+    "name": "Authentication",
+    "icon": "vendor/animated-icons/shield/shield.json",
+    "children": [
+      {
+        "path": "signin",
+        "name": "Signin"
+      },
+      {
+        "path": "signup",
+        "name": "Signup"
+      },
+      {
+        "path": "forgot",
+        "name": "Forgot"
+      },
+      {
+        "path": "lockscreen",
+        "name": "Lockscreen"
+      }
+    ]
+  },
+  {
+    "name": "Error",
+    "icon": "vendor/animated-icons/warning-1/warning-1.json",
+    "children": [
+      {
+        "path": "404",
+        "name": "404"
+      },
+      {
+        "path": "500",
+        "name": "Error"
+      }
+    ]
+  },
+  {
+    "path": "https://eleven.fusepx.com/docs",
+    "name": "Documentation",
+    "icon": "vendor/animated-icons/subscribe-3/subscribe-3.json"
+  }
+]

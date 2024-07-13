@@ -1,0 +1,32 @@
+<li class="nav-item" [ngClass]="selectedListClasses">
+  <a class="nav-link d-flex align-items-center nav-link" (click)="expand(node)">
+    <span class="animated-icon" *ngIf="node.icon">
+      <app-animated-icon
+        path="{{ node.icon }}"
+        size="18px"
+      ></app-animated-icon>
+    </span>
+    <span class="mr-auto menu-name">{{ node.name }}</span>
+    <span class="badge badge-{{ node.badge.type }}" *ngIf="node.badge">{{ node.badge.value }}</span>
+    <span class="caret" *ngIf='hasItems()' [ngClass]="hasItems() && expanded ? 'caret-active': ''">
+      <span class="animated-icon">
+        <app-animated-icon
+          path="assets/animated-icons/expand/expand.json"
+          size="12px"
+        ></app-animated-icon>
+      </span>
+    </span>
+  </a>
+
+  <div class="sub-menu collapse show" *ngIf="hasItems() && expanded" [@slideInOut]>
+    <ul class="nav flex-column">
+      <app-list-item *ngFor="let singleNode of nodeChildren | keyvalue : multilevelMenuService.kvDummyComparerFn"
+        [node]="singleNode.value"
+        [level]="level + 1"
+        [submenuLevel]="singleNode.key"
+        [selectedNode]='selectedNode'
+        (selectedItem)="selectedListItem($event)">
+      </app-list-item>
+    </ul>
+  </div>
+</li>

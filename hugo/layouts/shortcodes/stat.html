@@ -1,0 +1,31 @@
+<!-- Stat card -->
+<div class="card card-body {{ if isset .Params "fill" }}bg-{{.Get "type" }}{{ end }}">
+  <div class="{{ if isset .Params "vertical" }} flex-column justify-content-center text-center align-items-center {{ else }} justify-content-start align-items-center row {{ end }}">
+    {{ if isset .Params "reverse" }}
+    <div class="col-auto">
+      <h5 class="stat-widget-title mb-0 fw-400 {{ if isset .Params "fill" }}text-white{{ end }}">{{.Get "title" }}</h5>
+      <h6 class="stat-widget-subtitle {{ if isset .Params "fill" }}text-white{{ end }}">{{.Get "value" }}</h6>
+    </div>
+    <span class="mr-auto"></span>
+    <div class="col-auto {{ if isset .Params "vertical" }} p-3 {{ end }}">
+      <button type="button" class="btn {{ if isset .Params "type" }}btn-{{.Get "type" }}{{ end }}" style="padding: 0.1rem; border-radius: 50%; min-width: 32px; min-height: 32px;">
+        <span class="animated-icon">
+          <div style="{{ if isset .Params "vertical" }} width:44px;height:44px {{ else }} width:22px;height:22px {{ end }}" data-animation-path="{{.Get "icon" }}" data-loop="{{ if isset .Params "icon-loop" }}{{.Get "icon-loop" }}{{ else }}false{{ end }}" data-auto-play="{{ if isset .Params "icon-auto-play" }}{{.Get "icon-auto-play" }}{{ else }}false{{ end }}"></div>
+        </span>
+      </button>
+    </div>
+    {{ else }}
+    <div class="col-auto {{ if isset .Params "vertical" }} p-3 {{ end }}">
+      <button type="button" class="btn {{ if isset .Params "type" }}btn-{{.Get "type" }}{{ end }}" style="padding: 0.1rem; border-radius: 50%; min-width: 32px; min-height: 32px;">
+        <span class="animated-icon">
+          <div style="{{ if isset .Params "vertical" }} width:44px;height:44px {{ else }} width:22px;height:22px {{ end }}" data-animation-path="{{.Get "icon" }}" data-loop="{{ if isset .Params "icon-loop" }}{{.Get "icon-loop" }}{{ else }}false{{ end }}" data-auto-play="{{ if isset .Params "icon-auto-play" }}{{.Get "icon-auto-play" }}{{ else }}false{{ end }}"></div>
+        </span>
+      </button>
+    </div>
+    <div class="col-auto">
+      <h5 class="stat-widget-title mb-0 fw-400 {{ if isset .Params "fill" }}text-white{{ end }}">{{.Get "title" }}</h5>
+      <h6 class="stat-widget-subtitle {{ if isset .Params "fill" }}text-white{{ end }}">{{.Get "value" }}</h6>
+    </div>
+    {{ end }}
+  </div>
+</div>

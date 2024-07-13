@@ -1,0 +1,18 @@
+.cal-month-view {
+  background-color: transparent;
+  .cal-days {
+    border-left: 0;
+    border-right: 0;
+    > div:last-child > .cal-cell-row {
+      border-bottom: 0;
+    }
+  }
+}
+
+.cal-week-view {
+  background-color: transparent;
+  .cal-time-events, .cal-day-headers {
+    border-left: 0;
+    border-right: 0;
+  }
+}

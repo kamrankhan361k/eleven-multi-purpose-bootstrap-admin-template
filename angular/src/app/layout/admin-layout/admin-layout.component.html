@@ -1,0 +1,35 @@
+<ngx-loading-bar  color="red" [includeSpinner]="includeSpinner"></ngx-loading-bar>
+<div class="page" [ngClass]="{
+  'page-boxed': options.boxed,
+  'dark-mode': options.darkMode,
+  'page-sticky-header': options.stickyHeader,
+  'page-sticky-sidebar': options.stickySidebar,
+  'page-sidebar-collapsed': options.collapsed,
+  'page-top-header': options.topHeader
+}">
+<app-header class="app-header" (toggleFullscreen)="toggleFullscreen()" (toggleMobileSidebar)="toggleMobileSidebar()" (messageEvent)="receiveOptions($event)" *ngIf="options.topHeader" [isTopHeader]="options.topHeader"></app-header>
+  <div class="position-relative d-flex flex-row flex-fill page-wrapper">
+
+    <app-sidebar class="sidebar bg-dark page-sidebar" [ngStyle]="{
+      'transform': !options.sidebarOpened ? 'translateX(-100%)' : 'translateX(0)',
+      'min-width':'280px', 'max-width':'280px'
+    }" (toggleSidebar)="toggleSidebar()" [isTopHeader]="options.topHeader"></app-sidebar>
+    <div class="page-overlay" [ngStyle]="{
+      'visibility': !options.isOverlayVisible ? 'hidden' : 'visible',
+      'opacity': !options.isOverlayVisible ? '0' : '1'
+    }" (click)="options.sidebarOpened = false; options.isOverlayVisible = false;"></div>
+
+    <div
+      class="position-relative d-flex flex-column flex-fill page-content"
+      style="min-width:0"
+    >
+    <app-header class="app-header" [ngClass]="{'d-lg-none': routeOptions.removeHeader}" (toggleFullscreen)="toggleFullscreen()" (toggleMobileSidebar)="toggleMobileSidebar()" (messageEvent)="receiveOptions($event)" *ngIf="!options.topHeader"></app-header>
+
+      <div class="page-inner bg-light "[ngClass]="{'p-0': heading === 'messages' || heading === 'location'}">
+        <router-outlet></router-outlet>
+      </div>
+
+      <app-footer class="app-footer bg-light" *ngIf="!routeOptions.removeFooter"></app-footer>
+    </div>
+  </div>
+</div>

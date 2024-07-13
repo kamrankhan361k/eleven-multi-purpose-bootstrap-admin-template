@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="m-auto col-md-10 offset-md-1">
+    <div class="app-timeline" *ngIf="timeline">
+      <div class="position-relative clearfix text-sm-center mb-5">
+        <button class="py-2 px-4 btn btn-primary">Period ending 2017</button>
+      </div>
+      <section class="position-relative clearfix my-5" *ngFor="let item of timeline">
+        <span class="icon" [ngClass]="{'icon-even': item.id % 2 === 0, 'icon-odd': item.id % 2 === 1}"></span>
+        <small class="date text-muted" [ngClass]="{'date-even': item.id % 2 === 0, 'date-odd': item.id % 2 === 1}">{{getTimeAgo(item.date)}}</small>
+        <section class="content float-sm-left" [ngClass]="{'float-sm-left': item.id % 2 === 0, 'float-sm-right': item.id % 2 === 1}">
+          <div class="body shadow card" [ngClass]="{'float-sm-right': item.id % 2 === 0, 'float-sm-let': item.id % 2 === 1}">
+            <p class="mb-0">{{item.text}}</p>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+</div>

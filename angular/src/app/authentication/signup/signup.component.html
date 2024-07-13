@@ -1,0 +1,40 @@
+<div class="d-flex flex-column justify-content-center align-items-center px-3 bg-white min-vh-100">
+  <div class="w-100 auth-card">
+    <div class="card shadow-none">
+      <div class="card-body">
+        <div class="text-center mb-5">
+          <svg width="24" height="24" class="d-block m-auto">
+            <use xlink:href="#logo-icon"></use>
+          </svg>
+          <h4 class="mb-0 mt-3">Sign up</h4>
+          <p class="text-muted">to continue using your account</p>
+        </div>
+        <form class="needs-validation" novalidate #ngxFormValidator="ngxFormValidator" [ngxFormValidator]="{validateOn: 'blur'}">
+          <div class="mb-4 form-group">
+            <label for="name" class="">Name</label>
+            <input name="name" id="name" placeholder="Full name" type="text" class="form-control" required pattern="^[A-Za-z]{1}[0-9A-Za-z_]{1,19}" [(ngModel)]="model.name">
+          </div>
+          <div class="mb-4 form-group">
+            <label for="email" class="">Email</label>
+            <input type="email" email class="form-control" name="email" id="email" [(ngModel)]="model.email" required placeholder="Enter email">
+          </div>
+          <div class="mb-4 form-group">
+            <label for="password" class="d-flex">Password</label>
+            <input id="password" type="password"
+              class="form-control"
+              [(ngModel)]="model.password"
+              name="password"
+              required
+              [maxlength]="'10'"
+              minlength="6"
+              placeholder="Enter password">
+          </div>
+          <button class="mb-3 btn btn-primary btn-lg btn-block">Sign up</button>
+          <div class="text-center">
+            <small class="text-muted text-center"><span>Already have an account?</span> <a [routerLink]="['/authentication/signin']">Login Now!</a></small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

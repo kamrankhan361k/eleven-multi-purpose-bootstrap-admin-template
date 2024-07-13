@@ -1,0 +1,26 @@
+<div class="app-taskboard" *ngIf="tasks">
+  <div class="h-100">
+    <div class="app-taskboard-wrapper" *ngFor="let task of tasks">
+      <div class="app-taskboard-list">
+        <div class="app-taskboard-header">{{task}}</div>
+        <div class="app-taskboard-cards">
+          <div>
+            <div class="app-taskboard-task error" *ngFor="let taskboardItem of taskboard[task]">
+              <div class="p-2">
+                <p class="mb-0">{{taskboardItem.title}}</p>
+                <small class="text-muted d-block mb-2">{{taskboardItem.description}}</small>
+                <div class="cover" style="height: 150px;" *ngIf="taskboardItem.images">
+                  <ngb-carousel class="overflow-hidden" [showNavigationArrows]="showNavigationArrows">
+                    <ng-template ngbSlide *ngFor="let image of taskboardItem.images">
+                      <div class="image" [ngStyle]="{'background-image': 'url('+image+')', height: '150px'}"></div>
+                    </ng-template>
+                  </ngb-carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

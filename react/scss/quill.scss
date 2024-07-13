@@ -1,0 +1,27 @@
+@import "node_modules/react-quill/dist/quill.snow";
+
+.quill {
+  border-radius: 0.25rem;
+}
+
+quill-editor {
+  display: block;
+  border-color: $border-color;
+}
+.ql-toolbar {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.ql-container {
+  min-height: 100px;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.ql-container.ql-snow,
+.ql-toolbar.ql-snow {
+  border-color: $border-color;
+}
+.ql-snow.ql-toolbar button,
+.ql-snow .ql-toolbar button {
+  color: inherit;
+}

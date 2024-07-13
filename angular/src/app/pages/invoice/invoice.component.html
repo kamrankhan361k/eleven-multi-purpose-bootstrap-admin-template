@@ -1,0 +1,105 @@
+<div class="row" *ngIf="invoice">
+  <div class="m-auto col-md-10 offset-md-1">
+    <div class="text-monospace">
+      <div class="card">
+        <div class="bg-dark text-light rounded-top p-5">
+          <div class="p-5">
+            <h1 class="font-weight-bold">{{invoice.receiver.company}}</h1>
+            <div class="d-md-flex">
+              <div class="mr-auto">
+                <ul class="list-unstyled">
+                  <li>{{invoice.receiver.name}}</li>
+                  <li>{{invoice.receiver.email}}</li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li>
+                    {{invoice.receiver.location.street.number}}
+                    {{invoice.receiver.location.street.name}}
+                  </li>
+                  <li>{{invoice.receiver.location.city}}</li>
+                  <li>{{invoice.receiver.location.state}}</li>
+                  <li>{{invoice.receiver.location.country}}</li>
+                  <li>{{invoice.receiver.location.postcode}}</li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li>Invoice #{{invoice.id}}</li>
+                  <li>{{invoice.createdAt}}</li>
+                </ul>
+              </div>
+              <div class="text-right">
+                <ul class="list-unstyled">
+                  <li>{{invoice.sender.company}}</li>
+                  <li>{{invoice.sender.name}}</li>
+                  <li>{{invoice.sender.email}}</li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li>
+                    {{invoice.sender.location.street.number}}
+                    {{invoice.sender.location.street.name}}
+                  </li>
+                  <li>{{invoice.sender.location.city}}</li>
+                  <li>{{invoice.sender.location.state}}</li>
+                  <li>{{invoice.sender.location.country}}</li>
+                  <li>{{invoice.sender.location.postcode}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-bottom p-5">
+          <div class="p-5">
+            <div class="d-flex py-2 text-muted  border-bottom border-top align-items-center border-light">
+              <div class="mr-auto">
+                <small>Description</small>
+              </div>
+              <div class="text-right">
+                <small>Amount</small>
+              </div>
+            </div>
+            <div class="d-flex py-4 border-bottom align-items-center border-light" *ngFor="let item of invoice.items">
+              <div class="mr-auto">
+                <span>{{item.title}}</span>
+                <small class="d-block text-muted">{{item.subtitle}}<span>&nbsp;*&nbsp;{{item.quantity}}</span></small>
+              </div>
+              <div class="text-right">
+                <span>{{itemPrice(item.price, item.quantity)}}</span>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="d-block ml-auto w-100" style="max-width: 400px;">
+                <div class="d-flex py-4 border-bottom border-top align-items-center border-light">
+                  <small class="mr-auto text-muted">Subtotal</small>
+                  <span class="text-right">{{getSubTotal()}}</span>
+                </div>
+                <div class="d-flex py-4 border-bottom border-top align-items-center border-light">
+                  <small class="mr-auto text-muted">Tax</small>
+                  <span>
+                    <small class="text-muted">@ {{tax}}% -
+                    </small>
+                    <span>{{getCalculatedTax()}}</span>
+                  </span>
+                </div>
+                <div class="d-flex py-4 border-bottom border-top align-items-center border-light">
+                  <small class="mr-auto text-muted">Discount</small>
+                  <span>
+                    <small class="text-muted">0% off -
+                    </small>
+                    <span>$0.00</span>
+                  </span>
+                </div>
+                <div class="d-flex py-4 border-bottom border-top align-items-center border-primary">
+                  <small class="mr-auto text-muted">Total</small>
+                  <strong>{{getTotal()}}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-5 text-center">
+        <button class="py-2 px-4 mx-2 btn btn-primary">Pay Now</button>
+        <button class="py-2 px-4 mx-2 btn btn-danger">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

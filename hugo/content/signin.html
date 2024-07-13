@@ -1,0 +1,40 @@
+---
+layout: auth
+title: "Signin"
+group: error
+---
+
+<div class="d-flex flex-column justify-content-center align-items-center px-3 bg-white min-vh-100">
+  <div class="w-100 auth-card">
+    <div class="card shadow-none">
+      <div class="card-body">
+        <div class="text-center mb-5">
+          <svg width="24" height="24" class="d-block m-auto">
+            <use xlink:href="#logo-icon"></use>
+          </svg>
+          <h4 class="mb-0 mt-3">Good Evening, please log in</h4>
+          <p class="text-muted">to continue using your account</p>
+        </div>
+        <form class="">
+          <div class="mb-4 form-group">
+            <label for="email" class="">Email</label>
+            <input name="email" id="email" placeholder="Email address" type="email" class="form-control">
+          </div>
+          <div class="mb-4 form-group">
+            <label for="password" class="d-flex">
+              <span class="mr-auto">Password</span>
+              <a class="form-text small text-muted" href="forgot">Forgot password?</a>
+            </label>
+            <input placeholder="Password" id="password" type="text" class="form-control">
+          </div>
+          <button class="mb-3 btn btn-primary btn-lg btn-block">Sign in</button>
+          <div class="text-center">
+            <small class="text-muted text-center">
+              <span>Don't have an account yet?</span> <a href="signup">Create one now!</a>
+            </small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

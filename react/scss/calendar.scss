@@ -1,0 +1,61 @@
+@import "node_modules/react-big-calendar/lib/css/react-big-calendar";
+
+.app-calendar {
+  min-height: 80vh;
+  height: 100%;
+}
+.rbc-calendar {
+  display: block;
+}
+.calendar-toolbar {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+.rbc-time-view,
+.rbc-month-view {
+  border-width: 0;
+  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+.rbc-header {
+  font-weight: 500;
+  text-align: right;
+}
+.rbc-header + .rbc-header {
+  border-left: 0;
+}
+@include media-breakpoint-down(md) {
+  .rbc-month-view {
+    width: 100%;
+    overflow-y: hidden;
+    min-height: 0.01%;
+    overflow-x: auto;
+  }
+  .rbc-month-view > * {
+    width: 700px;
+  }
+}
+@include media-breakpoint-up(xs) {
+  .rbc-month-view {
+    height: 100%;
+    height: calc(100vh - 220px);
+  }
+}
+.rbc-event {
+  background-color: $primary;
+  border-radius: $border-radius;
+  font-size: 12px;
+}
+.rbc-day-slot .rbc-event,
+.rbc-day-bg + .rbc-day-bg,
+.rbc-month-row + .rbc-month-row,
+.rbc-header,
+.rbc-time-content > * + * > *,
+.rbc-timeslot-group,
+.rbc-time-content, .rbc-day-slot .rbc-time-slot,
+.rbc-time-header-content {
+  border-color: $border-color!important;
+}
+.rbc-off-range-bg {
+  background-color: $gray-900;
+}

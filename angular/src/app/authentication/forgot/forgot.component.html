@@ -1,0 +1,25 @@
+<div class="d-flex flex-column justify-content-center align-items-center px-3 bg-white min-vh-100">
+  <div class="w-100 auth-card">
+    <div class="card shadow-none">
+      <div class="card-body">
+        <div class="text-center mb-5">
+          <svg width="24" height="24" class="d-block m-auto">
+            <use xlink:href="#logo-icon"></use>
+          </svg>
+          <h4 class="mb-0 mt-3">Recover your password</h4>
+          <p class="text-muted">Enter your email and we'll send you instructions on how to reset your password.</p>
+        </div>
+        <form class="needs-validation" novalidate #ngxFormValidator="ngxFormValidator" [ngxFormValidator]="{validateOn: 'blur'}">
+          <div class="mb-4 form-group">
+            <label for="email" class="">Email</label>
+            <input type="email" email class="form-control" name="email" id="email" [(ngModel)]="model.email" required placeholder="Enter email">
+          </div>
+          <button class="mb-3 btn btn-primary btn-lg btn-block">Reset password</button>
+          <div class="text-center">
+            <small class="text-muted text-center"><span>Don't have an account yet?</span> <a [routerLink]="['/authentication/signup']">Create one now!</a></small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

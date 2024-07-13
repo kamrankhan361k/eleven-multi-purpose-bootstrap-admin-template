@@ -1,0 +1,8 @@
+<!--Meta tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+<meta name="author" content="{{ .Site.Params.authors }}">
+<meta name="generator" content="Hugo {{ hugo.Version }}">
+<base href="{{ .Site.BaseURL }}" target="_top">

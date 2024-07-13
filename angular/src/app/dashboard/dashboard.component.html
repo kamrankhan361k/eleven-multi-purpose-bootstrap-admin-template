@@ -1,0 +1,94 @@
+<div class="row" *ngIf="dashboardData">
+  <div class="col">
+    <div class="card">
+      <div class="d-flex justify-content-between align-items-center card-header">
+        <div>
+          <span>{{dashboardData.chart.title}}</span>
+          <small class="d-block text-muted">Percentage change
+            <span class="text-danger">▼95.87%</span>
+          </small>
+        </div>
+        <div>
+          <div class="button-shadow btn-group-sm btn-group" role="group">
+            <button class="btn btn-outline-secondary">24 Hours</button>
+            <button class="btn btn-outline-secondary">7 Days</button>
+            <button class="btn btn-outline-secondary">1 Month</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="d-none d-sm-flex justify-content-between pb-4">
+          <div class="text-success">
+            <h5 class="mb-0">
+              <strong>
+                34.45B
+              </strong>
+            </h5>
+            <small>Aggregate Income</small>
+          </div>
+          <div class="d-sm-flex justify-content-around">
+            <div class="pr-5">
+              <h5 class="mb-0">
+                <strong>92.83</strong>
+              </h5>
+              <small>Average impressions</small>
+            </div>
+            <div class="pr-5 text-danger">
+              <h5 class="mb-0">
+                <strong>45.08%</strong>
+              </h5>
+              <small>Engagement rate</small>
+            </div>
+            <div>
+              <h5 class="mb-0">
+                <strong>783</strong>
+              </h5>
+              <small>Growth Rate</small>
+            </div>
+          </div>
+        </div>
+        <canvas height="60" baseChart class="chart" [datasets]="dashboardData.chart.data.datasets" [labels]="dashboardData.chart.data.labels" [options]="dashboardData.chart.options" [chartType]="dashboardData.chart.type"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="576K" title="Users" icon="assets/animated-icons/heart/heart.json" type="primary" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="99.99%" title="Uptime" icon="assets/animated-icons/online/online.json" type="secondary" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="465K" title="Visitors" icon="assets/animated-icons/activity/activity.json" type="warning" iconSize="22"></app-stat>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <app-stat value="7,578" title="Likes" icon="assets/animated-icons/thumb/thumb.json" type="danger" iconSize="22"></app-stat>
+  </div>
+</div>
+<div class="row" *ngIf="dashboardData">
+  <div class="col-sm-12 col-md-4" *ngFor="let chart of dashboardData.charts">
+    <div class="card">
+      <div class="d-flex justify-content-between card-header">
+        <div>
+          <span>{{chart.title}}</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <canvas height="180" baseChart class="chart" [datasets]="chart.data.datasets" [labels]="chart.data.labels" [options]="chart.options" [chartType]="chart.type"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <app-weather-card city="harare" country="zw" days="6"></app-weather-card>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <app-post-card title="Shrimp and Chorizo Paella"
+    subtitle="Yesterday"
+    [images]="postCardImages"
+    coverHeight="294"
+    text="Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp."></app-post-card>
+  </div>
+</div>
